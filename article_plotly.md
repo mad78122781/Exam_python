@@ -41,3 +41,5 @@ We should install plotly as it is not integrated in python. To do this we run th
 > pip install plotly  
 
 
+**How is plotly structured:**  
+There are three main modules in Plotly
