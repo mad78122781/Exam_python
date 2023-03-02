@@ -22,7 +22,7 @@ III. Plotpy's libraries
 IV. How plotpy works
 
 
-![Logo Plotpy](plotly_logo.png){width=500px}
+![Logo Plotpy](./Images/plotly_logo.png){width=500px}
 
 **Plotpy:** 
 
@@ -38,8 +38,11 @@ Plotly uses javascript behind the scenes and is used to create interactive plots
 
 **How to install plotly:**  
 We should install plotly as it is not integrated in python. To do this we run this command in our terminal.  
-> pip install plotly  
+```
+pip install plotly 
+```
 
+![Installing plotly](./Images/Install.PNG)
 
 **How is plotly structured:**  
 There are three main modules in Plotly
