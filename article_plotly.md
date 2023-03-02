@@ -22,7 +22,7 @@ III. Plotpy's libraries
 IV. How plotpy works
 
 
-![Logo Plotpy](Plotly-1.webp)
+![Logo Plotpy](plotly_logo.png){width=500px}
 
 **Plotpy:** 
 
