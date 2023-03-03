@@ -20,7 +20,7 @@
 
 **III. How plotpy works**
 
-![Logo plotly](./Images/plotly_logo.png){display:center}
+![Logo plotly](./Images/plotly_logo.png){align-items:center}
 
 **What is Plotly:** 
 
