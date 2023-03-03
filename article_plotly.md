@@ -20,7 +20,7 @@
 
 **III. How plotpy works**
 
-![Logo plotly >](./Images/plotly_logo.png =900x200)
+![Logo plotly](./Images/plotly_logo.png)
 
 **What is Plotly:** 
 
