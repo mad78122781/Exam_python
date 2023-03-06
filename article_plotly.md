@@ -44,7 +44,7 @@ We should install plotly as it is not integrated in python. To do this we run th
 ```
 pip install plotly 
 ```
-
+:smile:
 ![Installing plotly](./Images/Install.PNG)
 
 **How is plotly structured:**   
