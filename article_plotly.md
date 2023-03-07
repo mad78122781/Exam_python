@@ -68,7 +68,7 @@ print(fig)
 ```
 ![Exemple](./Images/renduCodeplotlyExpress.png)
 
->A noter que le module plotly.express et le module plotly.graph_objects font le meme travaille la difference est que avec plotly.graph_objects on peut faire plus de parametrage pour modifier le rendu à notre bon vouloir. Une image vaut mille mot n'est-ce pas.  
+>Note that plotly.express module and plotly.graph_objects module do the same work the difference is that with plotly.graph_objects we can make more settings to modify the rendering to our liking. A picture is worth a thousand words isn't it. :smile:  
 ```
 #Plotly express
 fig = px.bar(df, x="Fruit", y="Number Eaten", color="Contestant", barmode="group")
