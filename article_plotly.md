@@ -12,7 +12,7 @@
 
 **II. Some plotly graphics**
 
-![Logo plotly](./Images/plotly_logo.png =500x200)
+![Logo plotly](./Images/plotly_logo.png)
 
 **What is Plotly:** 
 
