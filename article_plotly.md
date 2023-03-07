@@ -3,18 +3,20 @@
 <center>Mamadou Aliou Diallo</center>
 
 # Content
-- What is Plotly?
-- Why Plotly?
-- How to install ?
-- How is plotpy structured ?
+- [`What is Plotly?`](#what-is-plotly)
+- [`Why Plotly?`](#why-plotpy)
+- [`How to install ?`](#how-to-install-plotly)
+- [`How is plotpy structured ?`](#how-is-plotly-structured)
 
-**I. Plotpy VS Matplotlib**
+**[`I. Plotpy VS Matplotlib`](#i-plotpy-vs-matplotlib)**
 
-**II. Some plotly graphics**
+**[`II. Some plotly graphics`](#ii-some-plotly-graphics)**
+
+**[`III. Reference`](#iii-reference)**
 
 ![Logo plotly](./Images/plotly_logo.png)
 
-**What is Plotly:** 
+##### **What is Plotly:** 
 
 *Plotly*, before being a well-known Python library, is a Montreal-based company founded by four people. Its objective is to develop visualization tools as well as data analysis tools.  
 The company's productions are diverse and varied. The Python Dash framework, which allows the development of web applications, is one of them. It offers web applications deployed through a web browser allowing to share online data visualization. Chart studio is another example of tools created by the company. It is a software infrastructure allowing to store charts on an interface in a public or private way. The public mode makes available to all users various pre-designed charts that can be downloaded.
@@ -23,7 +25,7 @@ Thanks to the development of different APIs, Plotly is a library available in se
 Plotly is an open-source Python module that is used for data visualization and supports various graphs such as line graphs, scatter plots, bar graphs, histograms, areas, etc.  
 ![Illustration de quelques graph](./Images/exempleDiagPlotly.png)
 
-**Why plotpy:**
+##### **Why plotpy:**
 
 Plotly uses javascript behind the scenes and is used to create interactive plots where we can zoom in on the graph or add additional information like hover data and more.
 
@@ -33,7 +35,7 @@ Plotly uses javascript behind the scenes and is used to create interactive plots
 - It is visually appealing and can be accepted by a wide range of audiences.  
 - This allows for endless customization of our graphics, making our plot more meaningful and understandable to others.
 
-**How to install plotly:**  
+##### **How to install plotly:**  
 We should install plotly as it is not integrated in python. To do this we run this command in our terminal.  
 ```
 pip install plotly 
@@ -41,7 +43,7 @@ pip install plotly
 
 ![Installing plotly](./Images/Install.PNG)
 
-**How is plotly structured:**   
+##### **How is plotly structured:**   
 There are three main modules in Plotly  
 - plotly.plotly serves as an interface between the local machine and Plotly. It contains functions that require a response from the Plotly server.
 - The plotly.graph_objects module contains the objects (figure, layout, data and plot definition such as scatterplot, line graph) that are responsible for creating the plots. The figure can be represented as dict or instances of plotly.graph_objects.Figure and these are serialized as JSON before being passed to plotly.js. Figures are represented as trees where the root node has three top layer attributes - data, layout and frames and the named nodes called "attributes".
