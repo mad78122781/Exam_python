@@ -1,12 +1,6 @@
-<center>Mamadou Aliou Diallo</center>
+![DIT logo](./Images/logoDIT.png)
 
-<style>
-    body{
-        background-opacity: 0.5;
-        background-color: white;
-        color: black;
-    }
-</style>
+<center>Mamadou Aliou Diallo</center>
 
 # Content
 - What is Plotly?
@@ -16,9 +10,9 @@
 
 **I. Plotpy VS Matplotlib**
 
-**II. How plotpy works**
+**II. Some plotly graphics**
 
-![Logo plotly](./Images/plotly_logo.png)
+![Logo plotly](./Images/plotly_logo.png =500x200)
 
 **What is Plotly:** 
 
@@ -63,7 +57,6 @@ fig.show()
 ```
 ![Exemple de code](./Images/graphObject.png)
 - The plotly.tools module contains various tools in the form of functions that can enhance the Plotly experience.  
-![Exemple]()
 
 >Note: The plotly.express module can create the whole figure in one go. It uses graph_objects internally and returns the graph_objects.Figure instance.
 ```
@@ -96,7 +89,7 @@ fig.show()
 ```
 ![image](./Images/go.png)
 
-**I. Plotpy VS Matplotlib:**
+#### **I. Plotpy VS Matplotlib:**
 
 Python already has a graphics library, much older than Plotly, called Matplotlib. This one also allows to create various graphics in a few lines of code and seems to be rather exhaustive.  
 >So the question one might ask is, how does Plotly differ from Matplotlib? What is the added value of Plotly?  
@@ -118,7 +111,7 @@ plt.show
 # Data generation: 1000 normal random points
 x = np.random.randn(1000)
  
-# visualization with matplotlib
+# visualization with plotly
 fig = px.histogram(x,)
 fig.show()
 ```
@@ -128,12 +121,94 @@ fig.show()
 
 *With these illustrations we can see that there is a big difference between the visualization of these two libraries. On the one hand we have matplotlib which offers us static diagrams and on the other hand plotly which in addition to returning us interactive diagrams it allows us to download our diagrams to reuse them as we wish*
 
-**II. How plotpy works**
+#### **II. Some plotly graphics**
 
-## Reference:
+**Line plot:**
+```
+#using the iris dataset
+df = px.data.iris() 
+  
+# plotting the line chart
+fig = px.line(df, x="species", y="petal_width") 
+  
+# showing the plot
+fig.show()
+```
+![Line Plot](./Images/linePlot.png)
+
+**Bar chart**
+```
+import plotly.express as px
+
+# using the iris dataset
+df = px.data.iris()
+
+# plotting the bar chart
+fig = px.bar(df, x="sepal_width", y="sepal_length")
+
+# showing the plot
+fig.show()
+```
+![Bar chart](./Images/barchart.png)
+
+**Pie chart**
+```
+import plotly.express as px
+
+# using the tips dataset
+df = px.data.tips()
+
+# plotting the pie chart
+fig = px.pie(df, values="total_bill", names="day")
+
+# showing the plot
+fig.show()
+```
+![Pie chart](./Images/piechart.png)
+
+**Scatter plot**
+```
+df = px.data.iris()
+
+fig = px.scatter(df, x="sepal_width", y="sepal_length", color="species", facet_col="species",
+                 title="Adding Traces To Subplots Witin A Plotly Express Figure")
+
+reference_line = go.Scatter(x=[2, 4],
+                            y=[4, 8],
+                            mode="lines",
+                            line=go.scatter.Line(color="gray"),
+                            showlegend=False)
+
+fig.add_trace(reference_line, row=1, col=1)
+fig.add_trace(reference_line, row=1, col=2)
+fig.add_trace(reference_line, row=1, col=3)
+
+fig.show()
+```
+![Scatter plot](./Images/scatterplot.png)
+
+**3D plot**
+```
+import plotly.express as px
+
+# Data to be plotted
+df = px.data.iris()
+
+# Plotting the figure
+fig = px.scatter_3d(df, x = 'sepal_width',
+					y = 'sepal_length',
+					z = 'petal_width',
+					color = 'species')
+
+fig.show()
+```
+![3D plot](./Images/3dPlot.png)
+
+#### **III. Reference:**
 - https://plotly.com/python/creating-and-updating-figures/
 - https://stacklima.com/utilisation-de-plotly-pour-la-visualisation-de-donnees-interactive-en-python/
 - https://plotly.com/python/basic-charts/
 - https://pythonhosted.org/plotpy/index.html
 - https://datascientest.com/realiser-de-la-data-visualisation-grace-a-plotly
 - https://plotly.com/python/graph-objects/
+- https://www.geeksforgeeks.org/python-plotly-tutorial/#Package
